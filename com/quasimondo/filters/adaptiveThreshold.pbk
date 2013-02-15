@@ -1,0 +1,49 @@
+<languageVersion : 1.0;>
+
+kernel AdaptiveThreshold
+<   namespace : "com.quasimondo";
+    vendor : "Quasimondo";
+    version : 1;
+    description : "Calculates a threshold based on the difference between a pixel and the average of its neighbourhood. You have to provide a blurred version of the same image as src2.";
+>
+{
+    input image4 src1;
+    input image4 src2;
+    output pixel4 dst;
+
+    parameter float2 tolerance
+    <
+        minValue: float2( 0.0, 0.0 );
+        maxValue: float2( 3.0, 1.0 );
+        defaultValue: float2( 0.1, 0.5 );
+    >;
+
+    parameter float4 color1
+    <
+        minValue: float4( 0.0, 0.0, 0.0, 0.0);
+        maxValue: float4( 1.0, 1.0, 1.0, 1.0);
+        defaultValue: float4( 0.0, 0.0, 0.0, 1.0);
+    >;
+    
+    parameter float4 color2
+    <
+        minValue: float4( 0.0, 0.0, 0.0, 0.0);
+        maxValue: float4( 1.0, 1.0, 1.0, 1.0);
+        defaultValue: float4( 1.0, 1.0, 1.0, 1.0);
+    >;
+
+
+    void
+    evaluatePixel()
+    {
+        float4 p = sampleNearest(src1,outCoord());
+        float4 diff = p - sampleNearest(src2,outCoord());
+        float sum = diff.r + diff.g + diff.b;
+        if ( sum == 0.0 )
+        {
+            dst = ( ( p.r + p.g + p.b ) < tolerance[1] * 3.0 ? color1 : color2 );
+        } else {
+            dst = ( sum <= tolerance[0] ? color1 : color2 );
+        }
+    }
+}
