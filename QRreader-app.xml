@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <application xmlns="http://ns.adobe.com/air/application/2.5">
     <id>com.dansl.QRreader</id>
-    <versionNumber>1.5</versionNumber>
+    <versionNumber>1.6</versionNumber>
     <filename>QRreader</filename>
     <description>QRreader - Desktop QR Code Reader
 App Created By: Dansl.net
@@ -9,20 +9,20 @@ QRCodeReader Class Library By: LOGOSWARE
 Reading Improvments Thanks to Kasper Kamperman   Quasimondo</description>
     <!-- To localize the description, use the following format for the description element.
 	<description>
-		<text xml:lang="en">English App description goes here</text>
-		<text xml:lang="fr">French App description goes here</text>
-		<text xml:lang="ja">Japanese App description goes here</text>
+		<text xml:lang="en"></text>
+		<text xml:lang="fr"></text>
+		<text xml:lang="ja"></text>
 	</description>
 	-->
     <name>QRreader</name>
     <!-- To localize the name, use the following format for the name element.
 	<name>
-		<text xml:lang="en">English App name goes here</text>
-		<text xml:lang="fr">French App name goes here</text>
-		<text xml:lang="ja">Japanese App name goes here</text>
+		<text xml:lang="en">QRreader</text>
+		<text xml:lang="fr">QRreader</text>
+		<text xml:lang="ja">QRreader</text>
 	</name>
 	-->
-    <copyright>Dansl.net 2012</copyright>
+    <copyright>Dansl 2015</copyright>
     <initialWindow>
         <content>QRreader.swf</content>
         <systemChrome>none</systemChrome>
