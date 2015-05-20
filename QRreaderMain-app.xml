@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<application xmlns="http://ns.adobe.com/air/application/2.5">
+    <id>com.dansl.QRreader</id>
+    <versionNumber>1.6</versionNumber>
+    <filename>QRreaderMain</filename>
+    <description>QRreader - Desktop QR Code Reader
+App Created By: Dansl.net
+QRCodeReader Class Library By: LOGOSWARE
+Reading Improvments Thanks to Kasper Kamperman   Quasimondo</description>
+    <!-- To localize the description, use the following format for the description element.
+	<description>
+		<text xml:lang="en"></text>
+		<text xml:lang="fr"></text>
+		<text xml:lang="ja"></text>
+	</description>
+	-->
+    <name>QRreaderMain</name>
+    <!-- To localize the name, use the following format for the name element.
+	<name>
+		<text xml:lang="en">QRreader</text>
+		<text xml:lang="fr">QRreader</text>
+		<text xml:lang="ja">QRreader</text>
+	</name>
+	-->
+    <copyright>Dansl 2015</copyright>
+    <initialWindow>
+        <content>QRreaderMain.swf</content>
+        <systemChrome>none</systemChrome>
+        <transparent>true</transparent>
+        <visible>true</visible>
+        <fullScreen>false</fullScreen>
+        <autoOrients>false</autoOrients>
+        <aspectRatio>portrait</aspectRatio>
+        <renderMode>auto</renderMode>
+        <maximizable>false</maximizable>
+        <minimizable>true</minimizable>
+        <resizable>false</resizable>
+    </initialWindow>
+    <customUpdateUI>false</customUpdateUI>
+    <allowBrowserInvocation>false</allowBrowserInvocation>
+    <icon>
+        <image16x16>logos/logo16.png</image16x16>
+        <image32x32>logos/logo32.png</image32x32>
+        <image48x48>logos/logo48.png</image48x48>
+        <image128x128>logos/logo128.png</image128x128>
+    </icon>
+    <supportedProfiles>desktop extendedDesktop</supportedProfiles>
+</application>
